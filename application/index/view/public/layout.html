@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="{:config('web_site_description')}">
+<meta name="keywords" content="{:config('web_site_keywords')}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{block name="title"}{:config('web_site_title')}{/block}</title>
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<link rel="icon" type="image/png" href="__MODULE_IMG__/favicon.png">
+<link rel="stylesheet" href="__MODULE_CSS__/amazeui.min.css">
+<link rel="stylesheet" href="__MODULE_CSS__/jiaji.css">
+{block name="style"}{/block}
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器,嘉际移民官方网站暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+{block name="header-container"}
+<header>
+  <div class="head-bar">
+    <div class="main am-cf">
+      <div class="am-fl">{:config('web_site_slogan')}</div>
+      <div class="am-fr"> <a href="{:config('weibo_url')}"><img src="__MODULE_IMG__/weibo.png" alt="">微博</a> <a href="javascript:void(0);" data-am-modal="{target: '#weixin-modal', closeViaDimmer: 0, width: 400, height: 300}"><img src="__MODULE_IMG__/weixin.png" alt="">微信</a> <a href="{:config('saleqq_url')}">客户服务</a>| <a href="#">关于我们</a>| <a href="#">网站地图</a> <span>服务热线：<span class="am-text-danger">{:config('servicephone')}</span></span> </div>
+    </div>
+  </div>
+  <div class="head main am-cf">
+    <div class="am-fl"> <a href=""><img src="__MODULE_IMG__/logo.png" alt="" width="200" height="113"></a> </div>
+    <div class="am-fl">
+      <ul class="head-nav">
+        {volist name="main_nav" id="menu"}
+        <li {if($menu['column'] == $classid)} class="cur"{/if}>
+          <a href="{$menu.url}" rel="{$menu.rel|default=''}" target="{$menu.target}">{$menu.title}</a>
+          {notempty name="menu.child"}
+          <ul class="son-nav">
+            {volist name="menu.child" id="sub_menu"}
+            <li class="son-cur">  <a href="{$sub_menu.url}" rel="{$sub_menu.rel|default=''}" target="{$sub_menu.target}">{$sub_menu.title}</a>
+              <ul class="son-navs">
+                <li><a href="">EB-5投资移民</a></li>
+              </ul>
+            </li>
+            {/volist}
+          </ul>
+          {/notempty}
+        </li>
+        {/volist}
+      </ul>
+    </div>
+  </div>
+</header>
+{/block}
+{block name="main-container"}{/block}
+
+    {block name="page-footer"}
+    <footer>
+      <div class="foot-nav">
+        <div class="main am-cf">
+          <dl>
+            <dt>移民服务 </dt>
+            <dd><a href="">EB-5投资移民</a></dd>
+            <dd><a href="">EB-1A杰出人才</a></dd>
+            <dd><a href="">澳洲188A类投资移民</a></dd>
+            <dd><a href="">加拿大BC省投资移民</a></dd>
+          </dl>
+          <dl>
+            <dt>嘉际留学 </dt>
+            <dd><a href="">美国留学</a></dd>
+            <dd><a href="">英国留学</a></dd>
+            <dd><a href="">澳洲留学</a></dd>
+            <dd><a href="">香港留学</a></dd>
+            <dd><a href="">加拿大留学</a></dd>
+          </dl>
+          <dl>
+            <dt>嘉际集团 </dt>
+            <dd><a href="">赴美产子</a></dd>
+            <dd><a href="">赴美签证</a></dd>
+            <dd><a href="">我要考察</a></dd>
+            <dd><a href="">投资买房</a></dd>
+          </dl>
+          <dl>
+            <dt>嘉际集团 </dt>
+            <dd><a href="">公司简介</a></dd>
+            <dd><a href="">嘉际总裁</a></dd>
+            <dd><a href="">荣誉资质</a></dd>
+            <dd><a href="">嘉际优势</a></dd>
+          </dl>
+          <dl>
+            <dt>成功案例 </dt>
+            <dd><a href="">美国移民案例</a></dd>
+            <dd><a href="">澳洲移民案例</a></dd>
+            <dd><a href="">加拿大移民案例</a></dd>
+            <dd><a href="">欧洲移民案例</a></dd>
+          </dl>
+          <dl>
+            <dt>联系电话 </dt>
+            <dd><a href="">400-8020-116</a></dd>
+            <dd><a href=""><img src="__MODULE_IMG__/qq-img.jpg" alt=""></a></dd>
+            <dd><a href=""><img src="__MODULE_IMG__/qq-img.jpg" alt=""></a></dd>
+          </dl>
+          <dl>
+            <dt>关注我们 </dt>
+            <dd><img src="__MODULE_IMG__/qr-img.jpg" width="120" alt=""></dd>
+            <dd class="am-text-center">嘉际微信</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="foot-bar">
+        <div class="main"><span>广州市晋升咨询有限公司</span> <span>地址：广州市越秀区环市东路339号广东国际大厦1711室</span><br>
+          <span>工信部备案号：<a href="">粤ICP备13040154号-2</a></span> <span>版权所有归嘉际移民所有</span><br>
+          <span>友情链接：<a href="">外联移民</a><a href="">腾讯科技</a><a href="">搜狐留学</a><a href="">网易教育</a><a href="">百度知道</a><a href="">新浪新闻</a><a href="">人民网</a><a href="">中国日报网</a><a href="">中国青年网</a><a href="">国际在线</a></span></div>
+      </div>
+    </footer>
+{/block}
+
+<div class="hidden">
+    {// 站点统计代码}
+    {:config('web_site_statistics')}
+    {block name="hidden"}{/block}
+</div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__MODULE_JS__/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__MODULE_JS__/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="__MODULE_JS__/amazeui.min.js"></script>
+<script src="__MODULE_JS__/jiaji.js"></script>
+
+{block name="script"}{/block}
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="weixin-modal">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">关注微信
+      <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+    </div>
+    <div class="am-modal-bd">
+      <img src="" style='width:200px;height:200px' alt="">
+    </div>
+  </div>
+</div>
+</body>
+</html>

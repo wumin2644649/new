@@ -1,0 +1,180 @@
+{extend name="public:layout" /}
+
+{block name="main-container"}
+<div class="slider">
+  <div class="main">
+    <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider="{'directionNav':false}" >
+      <ul class="am-slides">
+				{volist name="slider" id="item"}
+        <li> <a href="{$item.url|default='javascript:void(0);'}">了解更多</a><img src="{:get_file_path($item['cover'])}" alt="{$item.title}"> </li>
+				{/volist}
+  	</ul>
+    </div>
+  </div>
+</div>
+<div class="index-nav">
+  <ul class="am-avg-sm-4 main">
+    <li>
+      <div class="am-u-sm-4"> <img src="__MODULE_IMG__/index-nav1.png" alt="" class="am-margin-sm"> </div>
+      <div class="am-u-sm-8">
+        <div class="am-text-default">Immigrant</div>
+        <a href="" class="am-text-xl am-block am-btn-block">移民 <span class="am-fr am-icon-angle-right am-text-danger"></span></a> </div>
+    </li>
+    <li>
+      <div class="am-u-sm-4"> <img src="__MODULE_IMG__/index-nav2.png" alt="" class="am-margin-sm"> </div>
+      <div class="am-u-sm-8">
+        <div class="am-text-default">Study abroad</div>
+        <a href="" class="am-text-xl am-block am-btn-block">留学 <span class="am-fr am-icon-angle-right am-text-danger"></span></a> </div>
+    </li>
+    <li>
+      <div class="am-u-sm-4"> <img src="__MODULE_IMG__/index-nav3.png" alt="" class="am-margin-sm"> </div>
+      <div class="am-u-sm-8">
+        <div class="am-text-default">Investment</div>
+        <a href="" class="am-text-xl am-block am-btn-block">投资 <span class="am-fr am-icon-angle-right am-text-danger"></span></a> </div>
+    </li>
+    <li>
+      <div class="am-u-sm-4"> <img src="__MODULE_IMG__/index-nav4.png" alt="" class="am-margin-sm"> </div>
+      <div class="am-u-sm-8">
+        <div class="am-text-default">Service</div>
+        <a href="" class="am-text-xl am-block am-btn-block">服务 <span class="am-fr am-icon-angle-right am-text-danger"></span></a> </div>
+    </li>
+  </ul>
+</div>
+<div id="immigration-services">
+  <div class="main">
+    <div class="am-padding-top-xl am-text-center">
+      <div class="am-btn-block en-text am-text-xxl">Immigration  Services</div>
+      <div class="cn-text"><i></i>移民服务<i></i></div>
+    </div>
+    <div class="am-tabs title-tabs" data-am-tabs="{noSwipe: 1}">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+        <li class="am-active"><a href="#immigration-1">移民服务</a></li>
+        <li><a href="#immigration-2">成功案例</a></li>
+      </ul>
+      <div class="am-tabs-bd">
+        <div class="am-tab-panel am-fade am-in am-active" id="immigration-1">
+          <ul class="list-a1 am-cf">
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-usa.jpg" alt=""> <span class="text-a1">美国EB-5投资移民</span> <span class="text-a2">EB-5 成为美国所有美国移民类别中,申请核准时间比较短、资格条件限制最少的一条通道。</span> </a> </li>
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-usa.jpg" alt=""> <span class="text-a1">美国EB-1A杰出人才移民</span> <span class="text-a2">杰出人才移民不用花时间去等待签证配额,在相对较短的时间获得美国合法永久居留身份。</span> </a> </li>
+          </ul>
+          <ul class="list-a2 am-cf">
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-cna.jpg" alt=""> <span class="text-a1">加拿大移民</span> <span class="text-a2">对于想要移民加拿大的企业家来说,BC省移民是一条快速的移民通道。</span> </a> </li>
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-aus.jpg" alt=""> <span class="text-a1">澳洲移民</span> <span class="text-a2">生活中遇到的大部分的澳洲人还是与人为善的态度。</span> </a> </li>
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-ou.jpg" alt=""> <span class="text-a1">欧洲移民</span> <span class="text-a2">生活中遇到的大部分的澳洲人还是与人为善的态度。</span> </a> </li>
+            <li> <a href="" style="background-image: url(__MODULE_IMG__/assets/images/bg-usa.jpg)"> <img src="__MODULE_IMG__/flag-usa.jpg" alt=""> <span class="text-a1">护照投资</span> <span class="text-a2">美国房地产成为美国所有美国移民类别,申请核准时间比较短通道。</span> </a> </li>
+          </ul>
+        </div>
+        <div class="am-tab-panel am-fade" id="immigration-2">
+          <ul class="list-b1 am-cf">
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+            <li> <a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i> <img src="__MODULE_IMG__/case-img.jpg" alt=""></span><span>案例的标题</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="special-services" style="background-color: #f8f8f8;">
+  <div class="main">
+    <div class="am-padding-top-xl am-text-center">
+      <div class="am-btn-block en-text am-text-xxl">Special  Services</div>
+      <div class="cn-text"><i></i>特色服务<i></i></div>
+    </div>
+    <ul class="list-c1 am-cf">
+      <li> <a href=""> <span class="text-b1">签证服务</span> <span class="text-b2">快速高校办理签证业务</span> </a> </li>
+      <li> <a href=""> <span class="text-b1">考察服务</span> <span class="text-b2">你要掌握更多移民项目信息</span> </a> </li>
+      <li> <a href=""> <span class="text-b1">海外生子</span> <span class="text-b2">让更多的人赴海外生孩子</span> </a> </li>
+      <li> <a href=""> <span class="text-b1">投资、买房</span> <span class="text-b2">买房让你有更多投资的空间</span> </a> </li>
+    </ul>
+  </div>
+</div>
+<div id="study-services">
+  <div class="main">
+    <div class="am-padding-top-xl am-text-center">
+      <div class="am-btn-block en-text am-text-xxl">Study Services</div>
+      <div class="cn-text"><i></i>留学服务<i></i></div>
+    </div>
+    <ul class="list-d1 am-cf am-margin-bottom-lg am-margin-top-lg">
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-1.png" alt=""></i><span class="text-d1">T-CUP加州名校报送计划</span><span class="text-d2">利用美国教育体制的特点及教育平等法则，让中国留学生像美国普通高中生一样，在学院完成大学前2年基础课程，</span> </a></li>
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-2.png" alt=""></i><span class="text-d1">美国顶尖艺校直通车</span><span class="text-d2">TAUP让没有时间准备托福或语言成绩不扎实的孩子也有读美国顶尖艺术院校的机会。</span> </a></li>
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-3.png" alt=""></i><span class="text-d1">留美初高中生关爱项目</span><span class="text-d2">全方位个性化为你的美国初高中学习和生活服务 ，为孩子的健康成长保驾护航。</span> </a></li>
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-4.png" alt=""></i><span class="text-d1">美国夏令营项目</span><span class="text-d2">国好莱坞14天“明星之路”夏令营，我们提供给你一个勇闯好莱坞的机会！</span> </a></li>
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-5.png" alt=""></i><span class="text-d1">英国--香港留学项目</span><span class="text-d2">EB-5 成为美国所有美国移民类别中，申请核准时间比较短、资格条件限制最少的一条通道。</span> </a></li>
+      <li><a href=""> <i><img src="__MODULE_IMG__/list-d1-6.png" alt=""></i><span class="text-d1">各国名校直通车项目</span><span class="text-d2">EB-5 成为美国所有美国移民类别中，申请核准时间比较短、资格条件限制最少的一条通道。</span> </a></li>
+    </ul>
+  </div>
+</div>
+<div class="main am-cf am-margin-top-lg am-padding-bottom-xl">
+  <div id="index-team">
+    <div class="text-title">专家团队</div>
+    <div data-am-widget="slider" class="am-slider am-slider-default slider-team" data-am-slider="{animationLoop: true,itemWidth: 200,maxItems:5,minItems:5,itemMargin: 15, slideshow: false}" >
+      <ul class="am-slides">
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team1.jpg"></span><span>David Jacoby</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team2.jpg"></span><span>Pat Hogan</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team3.jpg"></span><span>AndrewS.Fonfa</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team1.jpg"></span><span>David Jacoby</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team2.jpg"></span><span>Pat Hogan</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team1.jpg"></span><span>David Jacoby</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team2.jpg"></span><span>Pat Hogan</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team3.jpg"></span><span>AndrewS.Fonfa</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team1.jpg"></span><span>David Jacoby</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team2.jpg"></span><span>Pat Hogan</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team3.jpg"></span><span>AndrewS.Fonfa</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team1.jpg"></span><span>David Jacoby</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team2.jpg"></span><span>Pat Hogan</span></a> </li>
+        <li><a href=""> <span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-team3.jpg"></span><span>AndrewS.Fonfa</span></a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="index-faq">
+    <div class="text-title">移民常见问题<a href="" class="am-fr am-text-sm">更多<i class="am-icon-angle-double-right"></i></a></div>
+    <ul class="list-e1">
+      <li><a href="">20年招生经验，他如何挑选中国学生？</a></li>
+      <li><a href="">国内转学到国外 到底该怎样转？</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+      <li><a href="">代写代考的苦果，美国代写作业代上课的风险</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+    </ul>
+  </div>
+  <div class="am-cf am-margin-bottom-sm"></div>
+  <div id="immigrant-new">
+    <div class="text-title">移民动态<a href="" class="am-fr am-text-sm">更多<i class="am-icon-angle-double-right"></i></a></div>
+    <a href=""><span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-new1.jpg" width="374" height="170" alt=""></span></a>
+    <ul class="list-e1">
+      <li><a href="">20年招生经验，他如何挑选中国学生？</a></li>
+      <li><a href="">国内转学到国外 到底该怎样转？</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+      <li><a href="">代写代考的苦果，美国代写作业代上课的风险</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+    </ul>
+  </div>
+  <div id="jiaji-new">
+    <div class="text-title">嘉际动态<a href="" class="am-fr am-text-sm">更多<i class="am-icon-angle-double-right"></i></a></div>
+    <a href=""><span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-new2.jpg" width="374" height="170" alt=""></span></a>
+    <ul class="list-e1">
+      <li><a href="">20年招生经验，他如何挑选中国学生？</a></li>
+      <li><a href="">国内转学到国外 到底该怎样转？</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+      <li><a href="">代写代考的苦果，美国代写作业代上课的风险</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+    </ul>
+  </div>
+  <div id="media-new">
+    <div class="text-title">媒体报道<a href="" class="am-fr am-text-sm">更多<i class="am-icon-angle-double-right"></i></a></div>
+    <a href=""><span class="img-link"><i class="am-icon-btn am-btn-sm am-icon-link"></i><img src="__MODULE_IMG__/index-new3.jpg" width="374" height="170" alt=""></span></a>
+    <ul class="list-e1">
+      <li><a href="">20年招生经验，他如何挑选中国学生？</a></li>
+      <li><a href="">国内转学到国外 到底该怎样转？</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+      <li><a href="">代写代考的苦果，美国代写作业代上课的风险</a></li>
+      <li><a href="">挂靠的危害：借你一双慧眼，甄别 野鸡大学</a></li>
+    </ul>
+  </div>
+</div>
+{/block}
